@@ -19,19 +19,16 @@ def mod (first_number, second_number)
 end
 
 def calculator (prompt, first_number, second_number)
-    if prompt.to_i == 1
-        multied(first_number, second_number)
-    elsif prompt.to_i == 2
-        divided(first_number, second_number)
-    elsif prompt.to_i == 3
-        added(first_number, second_number)
-    elsif prompt,to_i == 4
-        subtracted(first_number, second_number)
-    elsif prompt.to_i == 5
-        mod(first_number, second_number)
-    else
-        puts "Incorrect choice"
+    result = case prompt.to_i
+        when 1 then multied(first_number, second_number)
+        when 2 then divided(first_number, second_number)
+        when 3 then added(first_number, second_number)
+        when 4 then subtracted(first_number, second_number)
+        when 5 then mod(first_number, second_number)
+        else puts "Incorrect choice"
     end
+    
+    return result
 end
 
 puts "Welcome to the calculator, what would you like to do? 1) multiply, 2) divide, 3) add, 4) subtaction and 5) mod"

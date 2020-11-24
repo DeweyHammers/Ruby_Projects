@@ -1,9 +1,14 @@
-puts "Welcome to the jungle, we have ____ and ____"
-puts "What should be the first word?"
-first_word = gets.chomp 
-puts "What should be the second word?"
-second_word = gets.chomp
-verse = "Welcome to the jungle, we have #{first_word} and #{second_word}"
-puts "The completed verse is '#{verse}'"
-puts "Your sonf has #{verse.length} character in it including spaces"
-puts "The song reversed sounds funny, but here it is '#{verse.reversecl}'"
+puts "Enter your name"
+name = gets.chomp
+puts "Enter in a your exam score"
+prompt = gets.chomp.to_i
+
+result = case prompt 
+    when 0..40 then "F"
+    when 41..60 then "C"
+    when 61..70 then "B"
+    when 71..100 then "A"
+    else "invalid score"
+end
+
+puts "Hello #{name}, your grade is #{result}."
